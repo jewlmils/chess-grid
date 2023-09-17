@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,800;1,600&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+header {
+  color: white;
+  margin-bottom: 1rem; 
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(images/paper.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.chess_board{
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.playing_area {
+    width: min(80vh, 80vw);
+    height: min(80vh, 80vw);
+    border-radius: 0.625rem;
+    overflow: hidden;
+    
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+}
+
+.playing_area .square1,
+.playing_area .square2{
+    width: min(10vh, 10vw);
+    height: min(10vh, 10vw);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: min(8vh, 8vw);
+}
+
+.square1:nth-child(odd), 
+.square2:nth-child(even){
+    background-color: #6e3a07;
+}
+
+.square1:nth-child(even), 
+.square2:nth-child(odd) {
+    background-color: white;
+}
